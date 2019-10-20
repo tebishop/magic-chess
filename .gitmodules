@@ -1,0 +1,3 @@
+[submodule "Chess-Playing-AI-Bot"]
+	path = Chess-Playing-AI-Bot
+	url = git@github.com:harshpatel097/Chess-Playing-AI-Bot.git
