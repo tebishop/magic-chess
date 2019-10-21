@@ -10,7 +10,7 @@ test_data_path = 'test_data/new_'
 test_iter = '0'
 
 parser = board_parser.BoardParser()
-board = np.zeros((1,800,800,3))
+board = np.zeros((800,800,3))
 
 # Tests the chess board classifier
 for test_iter in range(0, 8):
@@ -36,7 +36,7 @@ for test_iter in range(0, 8):
     x = ((r-1) // 8 + 1) * 100
     y = ((r-1) % 8 + 1) * 100
 
-    board[0][x-100:x, y-100:y] = img
+    board[x-100:x, y-100:y] = img
 
   pred = parser.parse_board_image(board)
   print(pred)

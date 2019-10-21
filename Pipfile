@@ -13,6 +13,11 @@ chess = "*"
 keras = "*"
 pil = "*"
 pillow = "*"
+requests = "*"
+scipy = "*"
+pyclipper = "*"
+h5py = "*"
+tables = "*"
 
 [requires]
 python_version = "3.7"

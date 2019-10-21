@@ -1,3 +1,6 @@
 [submodule "Chess-Playing-AI-Bot"]
 	path = Chess-Playing-AI-Bot
 	url = git@github.com:harshpatel097/Chess-Playing-AI-Bot.git
+[submodule "board_rectifier_repo"]
+	path = neural-chessboard
+	url = git@github.com:li-dennis/neural-chessboard.git

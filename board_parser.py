@@ -5,7 +5,7 @@ import numpy as np
 root_dir = os.path.dirname(__file__)
 
 cpaib_abs_path = root_dir + '/Chess-Playing-AI-Bot/'
-# Takes a 800x800 image and spits out FEN codes
+# Takes a 800x800x3 image and spits out FEN codes
 
 class BoardParser:
   def __init__(self):
@@ -22,7 +22,7 @@ class BoardParser:
 
   def parse_board_image(self, board_image):
     """
-    Pass me a 1x800x800x3 and I'll give you a FEN
+    Pass me a 800x800x3 and I'll give you a FEN
     """
     fen_code = ''
 
@@ -31,7 +31,7 @@ class BoardParser:
     for x in range (1, 9):
       empty_ctr = 0
       for y in range(1, 9):
-        square_img = np.reshape(board_image[0, x*100 - 100:x*100, y*100 -100: y*100], (1,100,100,3))
+        square_img = np.reshape(board_image[x*100 - 100:x*100, y*100 -100: y*100], (1,100,100,3))
         occupant = self.parse_single_square(square_img)
         if occupant == 'E':
           empty_ctr += 1
